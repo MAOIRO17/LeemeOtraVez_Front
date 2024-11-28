@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/CarritoCompra.css"
 
-const ShoppingCart = () => {
+const CarritoCompra = () => {
   const [productos, setProductos] = useState([]);
   const [carrito, setCarrito] = useState([]);
 
@@ -82,4 +82,4 @@ const ShoppingCart = () => {
   );
 };
 
-export default ShoppingCart;
+export default CarritoCompra;

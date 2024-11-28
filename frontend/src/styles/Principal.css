@@ -1,0 +1,149 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #2d2f36;
+  color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1c1e26;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.home-header .header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4ecca3;
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-nav a {
+  font-size: 16px;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #4ecca3;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.img-background img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.home-content {
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.home-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: slideAndBounce 1.5s ease-out;
+}
+
+.home-subtitle {
+  font-size: 20px;
+  color: #828282;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-out;
+}
+
+.home-button {
+  margin-top: 20px;
+  background-color: #4ecca3;
+  color: #1c1e26;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #37a088;
+  transform: scale(1.1);
+}
+
+@keyframes slideAndBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+  }
+
+  .home-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .header-nav {
+    gap: 10px;
+  }
+
+  .header-nav a {
+    font-size: 14px;
+  }
+}
